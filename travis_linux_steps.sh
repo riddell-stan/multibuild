@@ -121,7 +121,7 @@ function install_run {
     #  TEST_DEPENDS  (optional)
     local plat=${1:-${PLAT:-x86_64}}
     bitness=$([ "$plat" == i686 ] && echo 32 || echo 64)
-    local docker_image="matthewbrett/trusty:$bitness"
+    local docker_image="riddellstan/xenial:$bitness"
     docker pull $docker_image
     docker run --rm \
         -e PYTHON_VERSION="$MB_PYTHON_VERSION" \
